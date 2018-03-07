@@ -1,28 +1,32 @@
-# SETTINGS HEROKU - Set Debug = FALSE in line 1 of settings.py, added admin, uncomment the STATIC_ROOT at line 68 of settings.py
+# SETTINGS LOCAL - Set Debug = TRUE in line 1 of settings.py AND Comment out the STATIC_ROOT at line 68 of settings.py
 import os.path
-import dj_database_url
 
 # Get the absolute path of the settings.py file's directory
 BASE_DIR = os.path.dirname(os.path.realpath(__file__ ))
 
-# False
-DEBUG = False
+DEBUG = True
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
-    ('Sam', 'sghuang2@illinois.edu')
 )
 
 MANAGERS = ADMINS
 
-# Use Config Vars from Heroku
-SECRET_KEY = os.environ.get('SECRET_KEY')
-
-DATABASES = {'default': dj_database_url.config(default='postgres://admin:password@localhost/hihungry_db')}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'hihungry_db',                      # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': 'admin',
+        'PASSWORD': 'password',
+        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '',                      # Set to empty string for default.
+    }
+}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', '0.0.0.0', 'sqlinjections.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -60,19 +64,20 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+# STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'staticfiles')
+# MAY NEED TO UNCOMMENT THIS AND REMOVE STATICFILES_DIRS BEFORE USING MANAGE.PY COLLECTSTATIC
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
 STATIC_URL = '/static/'
 
-# Additional locations of static files - THIS IS COMMENTED OUT FOR HEROKU DEPLOYMENT
-# STATICFILES_DIRS = [
-#    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-#    # Always use forward slashes, even on Windows.
-#    # Don't forget to use absolute paths, not relative paths.
-#    os.path.join(BASE_DIR, "static"), 'static'
-#]
+# Additional locations of static files
+STATICFILES_DIRS = [
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    'static'
+]
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -83,10 +88,10 @@ STATICFILES_FINDERS = (
 )
 
 # For use by Whitenoise
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Make this unique, and don't share it with anybody.
-# SECRET_KEY = '=9#1*lse5)_i&hgdb_ifudnfv8!^tgxlbn(qvqe4o5p$k8t148'
+SECRET_KEY = '=9#1*lse5)_i&hgdb_ifudnfv8!^tgxlbn(qvqe4o5p$k8t148'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -103,9 +108,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
     'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
@@ -117,7 +119,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates', 'mysite/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
