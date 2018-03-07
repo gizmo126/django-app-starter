@@ -1,0 +1,46 @@
+TUTORIAL:
+http://realdjango.herokuapp.com/
+
+SETTING UP MYSQL:
+https://dev.mysql.com/doc/refman/5.7/en/osx-installation.html
+https://stackoverflow.com/questions/33467337/reset-mysql-root-password-using-alter-user-statement-after-install-on-mac
+***forget the mySQL, use postgresql instead
+
+SETTING UP POSTGRES:
+-install: http://postgresapp.com/
+-adding user: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
+-error no admin: https://stackoverflow.com/questions/12028037/postgres-app-could-not-start-on-port-5432
+
+ERROR WHILE RUNNING 'pip install MySQL-python'
+https://stackoverflow.com/questions/22697440/cc-failed-with-exit-status-1-error-when-install-python-library
+https://apple.stackexchange.com/questions/254380/macos-sierra-invalid-active-developer-path
+
+ERROR WHILE RUNNING 'python manage.py schemamigration myapp --initial'
+-fixed path for sys.path for mysite.settings in wsgi.py: https://stackoverflow.com/questions/36210686/importerror-no-module-named-mysite-settings-django/36211423
+-updated homebrew (useless): https://github.com/Homebrew/homebrew-core/issues/18732
+-mod_wsgi: https://stackoverflow.com/questions/47326201/mac-osx-loadmodule-wsgi-module-not-working-as-mentioned-in-docs
+
+SETTING UP TEMPLATES TO DISPLAY INDEX.HTML:
+https://stackoverflow.com/questions/4562252/django-how-to-deal-with-the-paths-in-settings-py-on-collaborative-projects
+-upgrade django: https://teamtreehouse.com/community/running-pip-install-django-installs-version-111-how-can-i-install-18-that-is-referenced-in-the-video
+-remove south: https://stackoverflow.com/questions/29888046/django-1-8-create-initial-migrations-for-existing-schema
+https://stackoverflow.com/questions/32445953/django-app-works-fine-but-getting-a-template-warning-message
+
+SETTING UP STATIC FOLDER TO DISPLAY CSS:
+https://docs.djangoproject.com/en/2.0/howto/static-files/
+https://stackoverflow.com/questions/13446325/django-css-is-not-not-working
+https://stackoverflow.com/questions/10048651/path-of-staticfiles-dirs-in-django
+https://stackoverflow.com/questions/42537453/css-is-not-working-in-django-app-no-clue-what-is-wrong
+https://stackoverflow.com/questions/25990957/django-collectstatic-no-such-file-or-directory/25991707
+https://stackoverflow.com/questions/34586114/whats-the-point-of-djangos-collectstatic
+https://stackoverflow.com/questions/42537453/css-is-not-working-in-django-app-no-clue-what-is-wrong
+** had to delete STATIC_ROOT and some combination of all previous crap
+
+HEROKU:
+-remove mod-wsgi==4.6.2 because it messed shit up: https://code.google.com/archive/p/modwsgi/wikis/InstallationIssues.wiki
+  ^ fix but can't do this on heroku: https://stackoverflow.com/questions/42582712/relocation-r-x86-64-32s-against-py-notimplementedstruct-can-not-be-used-when
+-setting up static and whitenoise for static files: https://devcenter.heroku.com/articles/django-assets
+-configuring settings.py for heroku/collectstatic error: https://stackoverflow.com/questions/41904685/oserror-errno-2-no-such-file-or-directory-tmp-makecalls-static
+-procfile: https://stackoverflow.com/questions/16416172/how-can-i-modify-procfile-to-run-gunicorn-process-in-a-non-standard-folder-on-he
+-accessing heroku db using dj-database-url: https://stackoverflow.com/questions/12683367/heroku-django-no-module-named-dj-database-url
+-gunicorn errno62 connection refused: https://stackoverflow.com/questions/19579881/nginxgunicorndjango1-5-connect-failed-111-connection-refused-while-conn
