@@ -1,0 +1,32 @@
+PREREQUISITES: Python 2.7.14, PIP, Heroku CLI, Git
+
+INITIAL SETUP INSTRUCTIONS
+1. 'git clone https://github.com/gizmo126/HiHungry'
+2. 'cd HiHungry'
+3. 'pip install virtualenv'
+4. 'virtualenv --no-site-packages env'
+5. 'source env/bin/activate' to activate virtual environment, you should see (env) at beginning of cmd
+      -'deactivate' to deactivate your virtual environment
+6. 'pip install -r requirements.txt'
+7. 'python manage.py check' to see issues
+8. 'python manage.py runserver' to run application
+
+CHECK YOUR GIT STATUS:
+- 'git status' and 'git remote -v'
+
+CONNECT TO HEROKU:
+- 'heroku git:remote -a hihungry'
+
+COMMITTING CODE:
+1. 'git status'
+2. 'git pull' and merge
+3. 'git add .'
+4. 'git commit -m <message>'
+5. 'git push'
+
+PUSHING TO HEROKU:
+1. commit code to github repository first
+2. 'git push heroku master'
+
+END:
+- don't forget 'deactivate' to deactivate your virtual environment
