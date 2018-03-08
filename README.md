@@ -11,10 +11,11 @@ development environment setup using: http://realdjango.herokuapp.com/
 ## Prereq
 SETTING UP POSTGRES:
 - install: http://postgresapp.com/
+- http://postgresapp.com/documentation/cli-tools.html
 - adding user: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
 
 ## Setup
-See `setup.txt` for initial development environment setup 
+See `setup.txt` for initial development environment setup
 
 ## Notes
 - If you install any additional packages, run `pip freeze > requirements.txt` and commit
