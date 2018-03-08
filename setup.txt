@@ -20,6 +20,7 @@ SETTING UP POSTGRESQL:
 6. https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
 7. download db and run this to import db 'psql hihungry_db < dbexport.pgsql'
 8. 'python manage.py migrate'
+9. EXPORTING YOUR DB: pg_dump hihungry_db > dbexport.pgsql
 
 CHECK YOUR GIT STATUS:
 - 'git status' and 'git remote -v'
