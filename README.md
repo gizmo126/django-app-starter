@@ -8,7 +8,7 @@ development environment setup using: http://realdjango.herokuapp.com/
 - boostrap 3.0.0
 - jQuery 1.10.1
 
-# SETTING UP POSTGRESQL:
+## SETTING UP POSTGRESQL:
 1. install: http://postgresapp.com/
 2. run `sudo mkdir -p /etc/paths.d && echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp`
 3. open 'psql' and `CREATE DATABASE hihungry_db;`
@@ -20,7 +20,7 @@ development environment setup using: http://realdjango.herokuapp.com/
 8. `python manage.py migrate`
 9. EXPORTING YOUR DB: `pg_dump hihungry_db > dbexport.pgsql`
 
-# INITIAL SETUP INSTRUCTIONS
+## INITIAL SETUP INSTRUCTIONS
 1. 'git clone'
 2. 'cd HiHungry'
 3. 'pip install virtualenv'
@@ -42,18 +42,18 @@ development environment setup using: http://realdjango.herokuapp.com/
   - https://stackoverflow.com/questions/9529078/how-do-i-use-git-reset-hard-head-to-revert-to-a-previous-commit
   - https://stackoverflow.com/questions/19085807/please-enter-a-commit-message-to-explain-why-this-merge-is-necessary-especially
 
-# COMMITTING CODE:
+## COMMITTING CODE:
 1. 'git status'
 2. 'git pull' and merge
 3. 'git add .'
 4. 'git commit -m <message>'
 5. 'git push'
 
-# PUSHING TO HEROKU:
+## PUSHING TO HEROKU:
 0. 'heroku git:remote -a hihungry'
 1. commit code to github repository first
 2. 'git push heroku master'
 
-# END:
+## END:
 - - postgresql getting hung up (no admin): `brew services stop postgresql` then restart from gui
 - don't forget 'deactivate' to deactivate your virtual environment
