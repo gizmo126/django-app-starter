@@ -11,49 +11,43 @@ development environment setup using: http://realdjango.herokuapp.com/
 ## SETTING UP POSTGRESQL:
 1. install: http://postgresapp.com/
 2. run `sudo mkdir -p /etc/paths.d && echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp`
-3. open 'psql' and `CREATE DATABASE hihungry_db;`
+3. open 'psql' and `CREATE DATABASE <db_name>;`
 4. `CREATE USER myprojectuser WITH PASSWORD password';`
 5. `ALTER USER admin WITH SUPERUSER`
     - exit your psql instance by running `\q`
 6. https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
-7. download db and run this to import into local db `psql hihungry_db < dbexport.pgsql`
+7. download db and run this to import into local db `psql <db_name> < dbexport.pgsql`
 8. `python manage.py migrate`
-9. EXPORTING YOUR DB: `pg_dump hihungry_db > dbexport.pgsql`
+9. EXPORTING YOUR DB: `pg_dump <db_name> > dbexport.pgsql`
 
 ## INITIAL SETUP INSTRUCTIONS
-1. 'git clone'
-2. 'cd HiHungry'
-3. 'pip install virtualenv'
-4. 'virtualenv --no-site-packages env'
-5. 'source env/bin/activate' to activate virtual environment, you should see (env) at beginning of cmd
-      -'deactivate' to deactivate your virtual environment
-6. 'pip install -r requirements.txt'
-7. 'python manage.py check' to see issues
-8. 'python manage.py runserver' to run application
-9. 'git status' and 'git remote -v'
+1. `git clone`
+2. `cd HiHungry`
+3. `pip install virtualenv`
+4. `virtualenv --no-site-packages env`
+5. `source env/bin/activate` to activate virtual environment, you should see (env) at beginning of cmd
+      -`deactivate` to deactivate your virtual environment
+6. `pip install -r requirements.txt`
+7. `python manage.py check` to see issues
+8. `python manage.py runserver` to run application
 
-## Committing
-0. If you installed any additional python packages, run `pip freeze > requirements.txt`
-1. `git pull` and merge conflicts
-2. `git add .`
-3. `git commit -m "message"`
-4. `git push`
-5. issues:
+## Committing to GitHub
+0. If you installed any additional python packages, run `pip freeze > requirements.txt`,
+      then `git remote set-url origin https://github.com/USERNAME/REPOSITORY.git` and check with `git remote -v`
+1. `git status`
+2. `git pull` and merge conflicts
+3. `git add .`
+4. `git commit -m "message"`
+5. `git push`
+6. Issues:
   - https://stackoverflow.com/questions/9529078/how-do-i-use-git-reset-hard-head-to-revert-to-a-previous-commit
   - https://stackoverflow.com/questions/19085807/please-enter-a-commit-message-to-explain-why-this-merge-is-necessary-especially
 
-## COMMITTING CODE:
-1. 'git status'
-2. 'git pull' and merge
-3. 'git add .'
-4. 'git commit -m <message>'
-5. 'git push'
-
 ## PUSHING TO HEROKU:
-0. 'heroku git:remote -a hihungry'
+0. `heroku git:remote -a <your project>`
 1. commit code to github repository first
-2. 'git push heroku master'
+2. `git push heroku master`
 
 ## END:
-- - postgresql getting hung up (no admin): `brew services stop postgresql` then restart from gui
-- don't forget 'deactivate' to deactivate your virtual environment
+- postgresql getting hung up (no admin): `brew services stop postgresql` then restart from gui
+- don't forget `deactivate` to deactivate your virtual environment
