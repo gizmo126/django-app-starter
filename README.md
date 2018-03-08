@@ -13,19 +13,12 @@ SETTING UP POSTGRES:
 - install: http://postgresapp.com/
 - adding user: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
 
-INSTALL PIP:
-
 ## Setup
-- Clone repository
-- Run `cd hihungry` and `cd mysite`
-- Run `pip install -r requirements.txt`
-- Run `python manage.py runserver`
-- Navigate to `http://127.0.0.1:8000/'` to view initial landing page
-- Navigate to `http://127.0.0.1:8000/admin` for admin view using `username: admin` and `password: password`
+See `setup.txt` for initial development environment setup 
 
 ## Notes
 - If you install any additional packages, run `pip freeze > requirements.txt` and commit
-- Log encountered errors in `references.txt`
+- Log encountered errors in `notes.txt`
 
 ## Committing
 - `git pull` and merge conflicts
@@ -39,4 +32,5 @@ INSTALL PIP:
 - update schemas
 
 ## Errors
+- see `notes.txt`
 - postgresql getting hung up (no admin): `brew services stop postgresql` then restart from gui
