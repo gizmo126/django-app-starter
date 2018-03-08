@@ -1,4 +1,4 @@
-# HiHungry
+# Django Starter App
 development environment setup using: http://realdjango.herokuapp.com/
 
 ## Versions
@@ -14,7 +14,7 @@ SETTING UP POSTGRES:
 - adding user: https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-django-application-on-ubuntu-14-04
 
 ## Setup
-See `setup.txt` for initial development environment setup 
+See `setup.txt` for initial development environment setup
 
 ## Notes
 - If you install any additional packages, run `pip freeze > requirements.txt` and commit
@@ -29,7 +29,6 @@ See `setup.txt` for initial development environment setup
 ## Deploying to Heroku
 - https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html
 - https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Deployment
-- update schemas
 
 ## Errors
 - see `notes.txt`
