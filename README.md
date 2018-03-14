@@ -1,6 +1,6 @@
 # django-app-starter
 - development environment setup using: http://realdjango.herokuapp.com/
-- originally created Django stack for group project but scratched for LAMP stack: see hihungry
+- originally created Django stack for group project but scratched for LAMP stack: https://github.com/gizmo126/HiHungry
 
 ## Versions
 - django 1.8.18
@@ -23,7 +23,7 @@
 
 ## INITIAL SETUP INSTRUCTIONS
 1. `git clone`
-2. `cd HiHungry`
+2. `cd django-app-starter`
 3. `pip install virtualenv`
 4. `virtualenv --no-site-packages env`
 5. `source env/bin/activate` to activate virtual environment, you should see (env) at beginning of cmd
