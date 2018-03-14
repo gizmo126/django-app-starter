@@ -28,6 +28,7 @@ development environment setup using: http://realdjango.herokuapp.com/
 5. `source env/bin/activate` to activate virtual environment, you should see (env) at beginning of cmd
       -`deactivate` to deactivate your virtual environment
 6. `pip install -r requirements.txt`
+7. make sure that `settings_local.py` is renamed to just `settings.py` and rename the original `settings.py` to `settings_heroku.py`
 7. `python manage.py check` to see issues
 8. `python manage.py runserver` to run application
 
@@ -39,14 +40,12 @@ development environment setup using: http://realdjango.herokuapp.com/
 3. `git add .`
 4. `git commit -m "message"`
 5. `git push`
-6. Issues:
-  - https://stackoverflow.com/questions/9529078/how-do-i-use-git-reset-hard-head-to-revert-to-a-previous-commit
-  - https://stackoverflow.com/questions/19085807/please-enter-a-commit-message-to-explain-why-this-merge-is-necessary-especially
 
 ## PUSHING TO HEROKU:
 0. `heroku git:remote -a <your project>`
 1. commit code to github repository first
 2. `git push heroku master`
+* make sure that `settings.py` is the heroku version
 
 ## END:
 - postgresql getting hung up (no admin): `brew services stop postgresql` then restart from gui
