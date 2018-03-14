@@ -251,12 +251,6 @@
             ],
             "version": "==0.3.5"
         },
-        "mod-wsgi": {
-            "hashes": [
-                "sha256:b7b23ed416864432e267a819f4c101f8002e774896340ecee7581e0b153ce0a8"
-            ],
-            "version": "==4.6.2"
-        },
         "mysql-python": {
             "hashes": [
                 "sha256:811040b647e5d5686f84db415efd697e6250008b112b6909ba77ac059e140c74",
