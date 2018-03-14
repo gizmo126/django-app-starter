@@ -13,7 +13,7 @@
 ## SETTING UP POSTGRESQL:
 1. install: http://postgresapp.com/
 2. run `sudo mkdir -p /etc/paths.d && echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp`
-3. open 'psql' and `CREATE DATABASE <db_name>;`
+3. open `psql` and `CREATE DATABASE <db_name>;`
 4. `CREATE USER myprojectuser WITH PASSWORD password';`
 5. `ALTER USER admin WITH SUPERUSER`
     - exit your psql instance by running `\q`
