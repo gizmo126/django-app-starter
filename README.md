@@ -1,12 +1,13 @@
 # django-app-starter
 - development environment setup using: http://realdjango.herokuapp.com/
-- originally created Django stack for group project but scratched for LAMP stack: https://github.com/gizmo126/HiHungry
+- originally created Django stack for group project but used LAMP stack w/ cpanel instead: https://github.com/gizmo126/HiHungry
+- ELI5 setup instructions
 
 ## Versions
-- django 1.8.18
-- python 2.7.13
-- ~~mySQL 5.7.21~~ postgresql 10.3
-- boostrap 3.0.0
+- Django 1.8.18
+- Python 2.7.13
+- ~~MySQL 5.7.21~~ PostgreSQL 10.3
+- Boostrap 3.0.0
 - jQuery 1.10.1
 
 ## SETTING UP POSTGRESQL:
@@ -43,10 +44,11 @@
 5. `git push`
 
 ## PUSHING TO HEROKU:
-0. `heroku git:remote -a <your project>`
-1. commit code to github repository first
-2. `git push heroku master`
-* make sure that `settings.py` is the heroku version
+0. make sure that `settings.py` is the heroku version
+1. `heroku login`
+2. `heroku git:remote -a <your project>`
+3. commit code to github repository first
+4. `git push heroku master`
 
 ## END:
 - postgresql getting hung up (no admin): `brew services stop postgresql` then restart from gui
