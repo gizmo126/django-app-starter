@@ -1,7 +1,8 @@
 # django-app-starter
 - development environment setup using: http://realdjango.herokuapp.com/
-- originally created Django stack for group project but used LAMP stack w/ cpanel instead: https://github.com/gizmo126/HiHungry
-- ELI5 setup instructions
+- originally created Django stack for group project but used LAMP stack w/ cPanel instead: https://github.com/gizmo126/HiHungry
+- deploys to Heroku using Gunicorn
+- see below for ELI5 setup instructions for my groupmates
 
 ## Versions
 - Django 1.8.18
