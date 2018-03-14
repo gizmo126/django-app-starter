@@ -1,3 +1,4 @@
+
 # SETTINGS HEROKU - Set Debug = FALSE in line 1 of settings.py, added admin, uncomment the STATIC_ROOT at line 68 of settings.py
 import os.path
 import dj_database_url
@@ -18,7 +19,7 @@ MANAGERS = ADMINS
 # Use Config Vars from Heroku
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DATABASES = {'default': dj_database_url.config(default='postgres://admin:password@localhost/hihungry_db')}
+DATABASES = {'default': dj_database_url.config(default='postgres://admin:password@localhost/django-starter-application-db')}
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts

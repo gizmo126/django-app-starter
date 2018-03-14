@@ -1,5 +1,6 @@
 # django-app-starter
-development environment setup using: http://realdjango.herokuapp.com/
+- development environment setup using: http://realdjango.herokuapp.com/
+- originally created Django stack for group project but scratched for LAMP stack: see hihungry
 
 ## Versions
 - django 1.8.18
@@ -32,7 +33,7 @@ development environment setup using: http://realdjango.herokuapp.com/
 7. `python manage.py check` to see issues
 8. `python manage.py runserver` to run application
 
-## Committing to GitHub
+## COMMITTING TO GITHUB
 0. If you installed any additional python packages, run `pip freeze > requirements.txt`,
       then `git remote set-url origin https://github.com/USERNAME/REPOSITORY.git` and check with `git remote -v`
 1. `git status`
