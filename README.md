@@ -23,7 +23,7 @@
 9. EXPORTING YOUR DB: `pg_dump <db_name> > dbexport.pgsql`
 
 ## INITIAL SETUP INSTRUCTIONS
-1. `git clone`
+1. `git clone https://github.com/gizmo126/django-app-starter`
 2. `cd django-app-starter`
 3. `pip install virtualenv`
 4. `virtualenv --no-site-packages env`
